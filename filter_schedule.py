@@ -4,7 +4,7 @@ from icalendar.cal.calendar import Component
 import requests
 from icalendar import Calendar, Event
 
-SOURCE_URL = "https://api.innohassle.ru/music-room/v0/music-room.ics"
+SOURCE_URL = "https://p.inh.tatar/music-room/v0/music-room.ics"
 OUTPUT_DIR = "dist"
 OUTPUT_FILE = "schedule.ics"
 
