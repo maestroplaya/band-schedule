@@ -1,0 +1,48 @@
+name: Update filtered schedule
+
+on:
+  schedule:
+    - cron: "0 */1 * * *"  # every hour; adjust as you like
+  workflow_dispatch: {}     # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Avoid two deployments racing each other
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repo (to get filter_schedule.py)
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install icalendar requests
+
+      - name: Fetch and filter schedule
+        env:
+          BAND_ALIASES: ${{ vars.BAND_ALIASES }}
+        run: python filter_schedule.py
+
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
