@@ -29,10 +29,10 @@ https://github.com/user-attachments/assets/2ec65b56-d4fa-4619-871a-b9f62350bebb
 
 https://github.com/user-attachments/assets/51e6e7fb-cddf-47fd-8564-b4744368a485
 
-6. **Grab the feed URL**
-   Your resulting url will be at:
-   `https://<your-nickname>.github.io/band-schedule/schedule.ics` 
-   (as shown in the video above, in *Complete job* section, but with schedule.ics at the end)
+6. **Grab the feed URL**  
+   Your resulting url will be at:  
+   `https://<your-nickname>.github.io/band-schedule/schedule.ics`   
+   (as shown in the video above, in *Complete job* section, but with schedule.ics at the end)  
 
 And you're done! Feel free to point out any bugs or suggest new features <3
 
