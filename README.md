@@ -1,6 +1,7 @@
   🇬🇧 English | [🇷🇺 Русский](README.ru.md)
 
 # An easy way to track your band's schedule
+
 Tired of manually adding timeslots to your online calendar?  
 Well you're in the right place!
   

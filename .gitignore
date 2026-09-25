@@ -17,3 +17,6 @@ Thumbs.db
 
 # just in case
 .env
+
+# unused media
+media/
