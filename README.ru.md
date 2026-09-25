@@ -29,6 +29,9 @@ https://github.com/user-attachments/assets/2ec65b56-d4fa-4619-871a-b9f62350bebb
 
 https://github.com/user-attachments/assets/51e6e7fb-cddf-47fd-8564-b4744368a485
 
-6. **Скопируйте URL фида** Итоговый адрес будет выглядеть так: `https://<your-nickname>.github.io/band-schedule/schedule.ics` (как показано в видео выше, в разделе _Complete job_, но с добавлением schedule.ics в конце)
+6. **Скопируйте URL календаря**   
+   Итоговый адрес будет выглядеть так:  
+   `https://<your-nickname>.github.io/band-schedule/schedule.ics`  
+   (как показано в видео, в разделе _Complete job_, но с добавлением schedule.ics в конце)  
 
 Готово! Не стесняйтесь сообщать об ошибках и предлагать новые функции <3
