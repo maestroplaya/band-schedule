@@ -39,8 +39,15 @@ def matches_band(comp: Component, band_aliases: set[str]) -> bool:
 
 def main() -> None:
     band_aliases = get_band_aliases()
-    response = requests.get(SOURCE_URL, timeout=30)
-    response.raise_for_status()
+    try:
+        response = requests.get(SOURCE_URL, timeout=30)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print(
+            f"Failed to fetch schedule: {e}"
+            f"Please change SOURCE_URL or try again later."
+        )
+        return
     source_cal = Calendar.from_ical(response.content)
 
     filtered_cal = Calendar()
